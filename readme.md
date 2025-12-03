@@ -1,9 +1,9 @@
-# RELEASE 0.1 ALPHA
+# RELEASE 0.2 ALPHA
 -> GUIMaker tool for BlockMan GO
 
--> #1 GUI Maler
+-> #1 GUI Maker
 
-# Whats New in 0.1a ?
+# Whats New in 0.2a ?
 
 [#] support for windows 10
 
@@ -11,7 +11,11 @@
 
 [+] custom gui name
 
-[?] and many more
+[+] set bordered option
+
+[+] set border color option
+
+[+] redesign ui (barely)
 
 # Credits & Info
 
