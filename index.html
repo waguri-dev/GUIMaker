@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GUIMaker for Blockman Go</title>
+<style>
+    body {
+        margin: 0;
+        background: #0f0f0f;
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+    .navbar {
+        width: 100%;
+        padding: 18px 40px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #141414;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .navbar .title {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #4bc6ff;
+    }
+    .navbar .links a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: #d8d8d8;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+    .navbar .links a:hover {
+        color: #4bc6ff;
+    }
+    .hero {
+        padding-top: 160px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 46px;
+        margin-bottom: 14px;
+    }
+    .hero p {
+        font-size: 20px;
+        opacity: 0.75;
+        margin-bottom: 30px;
+    }
+    .hero button {
+        padding: 14px 32px;
+        background: #4bc6ff;
+        border: none;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #000;
+        transition: 0.25s;
+    }
+    .hero button:hover {
+        background: #32b3ef;
+    }
+    .section {
+        padding: 80px 40px;
+        max-width: 1100px;
+        margin: auto;
+    }
+    .section h2 {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+    .feature-box {
+        background: #1a1a1a;
+        padding: 24px;
+        border-radius: 10px;
+        transition: 0.25s;
+    }
+    .feature-box:hover {
+        background: #202020;
+    }
+    .feature-box h3 {
+        margin-bottom: 12px;
+        font-size: 20px;
+        color: #4bc6ff;
+    }
+    .footer {
+        padding: 30px;
+        text-align: center;
+        background: #141414;
+        margin-top: 60px;
+        color: #9d9d9d;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="title">GUIMaker for Blockman Go</div>
+    <div class="links">
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>#1 GUI Maker for Blockman Go</h1>
+    <p>Create your GUI and watch the Lua code build live as you work.</p>
+    <button onclick="scrollToDownload()">Download Now</button>
+</div>
+
+<div class="section" id="features">
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Live Lua Code Builder</h3>
+            <p>As you create your interface, the Lua code is generated instantly.</p>
+        </div>
+        <div class="feature-box">
+            <h3>No Preview Needed</h3>
+            <p>Focus on building and let the code builder handle the structure.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Clean Output</h3>
+            <p>Outputs organized Lua code ready for Blockman Go scripts.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Simple Workflow</h3>
+            <p>Designed for fast and smooth GUI construction with no complications.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="download">
+    <h2>Download</h2>
+    <p style="text-align:center; font-size:20px; opacity:0.8;">Your download link or button can go here.</p>
+</div>
+
+<div class="footer">
+    GUIMaker for Blockman Go © 2025
+</div>
+
+<script>
+    function scrollToDownload() {
+        document.getElementById("download").scrollIntoView({behavior:"smooth"});
+    }
+</script>
+
+</body>
+</html>
