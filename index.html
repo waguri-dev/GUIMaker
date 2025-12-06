@@ -13,14 +13,6 @@ body {
     color: white;
 }
 
-@keyframes rgbShadow {
-    0%   { box-shadow: 0 0 18px 4px red; }
-    25%  { box-shadow: 0 0 18px 4px orange; }
-    50%  { box-shadow: 0 0 18px 4px yellow; }
-    75%  { box-shadow: 0 0 18px 4px green; }
-    100% { box-shadow: 0 0 18px 4px blue; }
-}
-
 .navbar {
     width: 100%;
     padding: 18px 40px;
@@ -76,8 +68,19 @@ button {
     transition: 0.3s;
     box-shadow: 0 0 0 rgba(0,0,0,0);
 }
+
+@keyframes rgbShadow {
+    0%   { box-shadow: 0 0 18px 4px hsl(0, 100%, 50%); }
+    16%  { box-shadow: 0 0 18px 4px hsl(60, 100%, 50%); }
+    33%  { box-shadow: 0 0 18px 4px hsl(120, 100%, 50%); }
+    50%  { box-shadow: 0 0 18px 4px hsl(180, 100%, 50%); }
+    66%  { box-shadow: 0 0 18px 4px hsl(240, 100%, 50%); }
+    83%  { box-shadow: 0 0 18px 4px hsl(300, 100%, 50%); }
+    100% { box-shadow: 0 0 18px 4px hsl(360, 100%, 50%); }
+}
+
 button:hover {
-    animation: rgbShadow 2.5s linear infinite;
+    animation: rgbShadow 3s linear infinite;
     border-color: transparent;
 }
 
