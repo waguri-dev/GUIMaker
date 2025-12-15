@@ -6,173 +6,224 @@
 <title>GUIMaker for Blockman Go</title>
 
 <style>
-body {
-    margin: 0;
-    background: #0f0f0f;
-    font-family: Arial, sans-serif;
-    color: white;
+:root {
+    --bg-main: #0b0d10;
+    --bg-panel: #12151b;
+    --bg-panel-hover: #171b22;
+    --accent: #5aa9ff;
+    --accent-soft: rgba(90,169,255,0.25);
+    --text-main: #e6e6e6;
+    --text-muted: #9aa3ad;
+    --border-soft: rgba(255,255,255,0.06);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-main);
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+    color: var(--text-main);
+}
+
+/* NAVBAR */
 .navbar {
+    position: fixed;
+    top: 0;
     width: 100%;
-    padding: 18px 40px;
+    padding: 18px 42px;
+    background: rgba(11,13,16,0.9);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #141414;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-soft);
+    z-index: 100;
 }
+
 .navbar .title {
-    font-size: 22px;
-    font-weight: bold;
-    color: #4bc6ff;
-    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.5px;
 }
-.navbar .links a {
-    margin-left: 25px;
+
+.navbar a {
+    color: var(--text-muted);
     text-decoration: none;
-    color: #d8d8d8;
-    font-size: 16px;
+    margin-left: 28px;
+    font-size: 15px;
     transition: 0.2s;
 }
-.navbar .links a:hover {
-    color: #4bc6ff;
+
+.navbar a:hover {
+    color: var(--accent);
 }
 
+/* HERO */
 .hero {
-    padding-top: 160px;
+    min-height: 100vh;
+    padding: 160px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
+
 .hero h1 {
-    font-size: 46px;
+    font-size: 48px;
     margin-bottom: 14px;
+    letter-spacing: 0.5px;
 }
+
 .hero p {
     font-size: 20px;
-    opacity: 0.75;
-    margin-bottom: 30px;
-}
-
-button {
-    padding: 14px 32px;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    border: 2px solid #4bc6ff;
-    color: white;
-    background: black;
-    transition: 0.3s;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-@keyframes rgbShadow {
-    0%   { box-shadow: 0 0 18px 4px hsl(0, 100%, 50%); }
-    16%  { box-shadow: 0 0 18px 4px hsl(60, 100%, 50%); }
-    33%  { box-shadow: 0 0 18px 4px hsl(120, 100%, 50%); }
-    50%  { box-shadow: 0 0 18px 4px hsl(180, 100%, 50%); }
-    66%  { box-shadow: 0 0 18px 4px hsl(240, 100%, 50%); }
-    83%  { box-shadow: 0 0 18px 4px hsl(300, 100%, 50%); }
-    100% { box-shadow: 0 0 18px 4px hsl(360, 100%, 50%); }
-}
-
-button:hover {
-    animation: rgbShadow 3s linear infinite;
-    border-color: transparent;
-}
-
-.section {
-    padding: 80px 40px;
-    max-width: 1100px;
-    margin: auto;
-}
-.section h2 {
-    text-align: center;
-    font-size: 34px;
+    color: var(--text-muted);
+    max-width: 640px;
     margin-bottom: 40px;
 }
 
+/* BUTTON */
+button {
+    padding: 14px 36px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-soft);
+    background: linear-gradient(180deg, #0f1320, #0b0d14);
+    color: var(--text-main);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 18px var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+/* SECTIONS */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 60px;
+}
+
+/* FEATURES */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-.feature-box {
-    background: #1a1a1a;
-    padding: 24px;
-    border-radius: 10px;
-    transition: 0.25s;
-}
-.feature-box:hover {
-    background: #202020;
-}
-.feature-box h3 {
-    margin-bottom: 12px;
-    color: #4bc6ff;
+    gap: 28px;
 }
 
-.footer {
-    padding: 30px;
+.feature-box {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-soft);
+    padding: 26px;
+    border-radius: 14px;
+    transition: 0.25s;
+}
+
+.feature-box:hover {
+    background: var(--bg-panel-hover);
+    border-color: var(--accent-soft);
+}
+
+.feature-box h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* DOWNLOAD */
+.download-box {
     text-align: center;
-    background: #141414;
-    margin-top: 60px;
-    color: #9d9d9d;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top, #12182a, transparent 60%);
+    border-radius: 20px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 32px;
+    text-align: center;
     font-size: 14px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-soft);
+    background: #0a0c10;
 }
 </style>
 </head>
+
 <body>
 
+<!-- NAV -->
 <div class="navbar">
     <div class="title">GUIMaker 0.4a</div>
-    <div class="links">
+    <div>
         <a href="#features">Features</a>
         <a href="#download">Download</a>
     </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-    <h1>#1 GUI Maker for Blockman Go</h1>
-    <p>Create your GUI and watch the Lua code build live as you work.</p>
+    <h1>GUIMaker for Blockman Go</h1>
+    <p>
+        Design your GUI visually and watch clean Lua code generate in real time.
+        No clutter. No confusion. Just results.
+    </p>
     <button onclick="scrollToDownload()">Download Now</button>
 </div>
 
+<!-- FEATURES -->
 <div class="section" id="features">
     <h2>Features</h2>
     <div class="features">
         <div class="feature-box">
-            <h3>Live Lua Code Builder</h3>
-            <p>As you create your interface, the Lua code is generated instantly.</p>
+            <h3>Live Lua Generator</h3>
+            <p>Lua code updates instantly as you build your interface.</p>
         </div>
         <div class="feature-box">
-            <h3>No Preview Needed</h3>
-            <p>Focus on building and let the code builder handle the structure.</p>
+            <h3>Zero Preview Hassle</h3>
+            <p>No preview windows — the code is the final product.</p>
         </div>
         <div class="feature-box">
-            <h3>Clean Output</h3>
-            <p>Outputs organized Lua code ready for Blockman Go scripts.</p>
+            <h3>Optimized Output</h3>
+            <p>Clean, readable, and Blockman Go–ready scripts.</p>
         </div>
         <div class="feature-box">
-            <h3>Simple Workflow</h3>
-            <p>Designed for fast and smooth GUI construction with no complications.</p>
+            <h3>Fast Workflow</h3>
+            <p>Minimal UI designed for speed and efficiency.</p>
         </div>
     </div>
 </div>
 
+<!-- DOWNLOAD -->
 <div class="section" id="download">
-    <h2>Download</h2>
-    <div style="text-align:center;">
+    <div class="download-box">
+        <h2>Download</h2>
         <button onclick="window.location.href='https://github.com/waguri-dev/GUIMaker/releases/download/rel-3bf3a2/GUIMaker.exe'">
             Download GUIMaker
         </button>
     </div>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
-    DV7 Team © 2025
+    © 2025 グレイ・ファントム | OGURI
 </div>
 
 <script>
