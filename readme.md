@@ -3,9 +3,9 @@
 
 -> #1 GUI Maker
 
-# Whats New in 0.2a ?
+# Whats New in 0.5a ?
 
-[#] support for windows 10
+[#] support for windows 10, 11
 
 [+] custom variable
 
@@ -15,12 +15,17 @@
 
 [+] set border color option
 
+[+] Added GUIType.List
+
 [+] redesign ui (barely)
 
 # Credits & Info
 
--> THIS ACCOUNT IS MANAGED BY @mv.chytk
+-> THIS ACCOUNT IS MANAGED BY @gai.dev
 
 -> THE PROJECT IS UPDATED BY @gai.dev
 
--> THIS PROJECT IS RELEASED AND UPDATED TO THE PUBLIC BY @mv.chytk
+-> THIS PROJECT IS RELEASED AND UPDATED TO THE PUBLIC BY @gai.dev
+
+----
+UPDATE IN PROGRESS
